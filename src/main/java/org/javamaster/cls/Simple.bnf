@@ -1,0 +1,27 @@
+{
+  parserClass="org.javamaster.cls.parser.SimpleParser"
+  parserUtilClass="org.javamaster.cls.SimpleParserUtil"
+
+  extends="com.intellij.extapi.psi.ASTWrapperPsiElement"
+
+  psiClassPrefix="Simple"
+  psiImplClassSuffix="Impl"
+  psiPackage="org.javamaster.cls.psi"
+  psiImplPackage="org.javamaster.cls.psi.impl"
+
+  elementTypeHolderClass="org.javamaster.cls.psi.SimpleTypes"
+  elementTypeClass="org.javamaster.cls.step3.SimpleElementType"
+  tokenTypeClass="org.javamaster.cls.step3.SimpleTokenType"
+
+  psiImplUtilClass="org.javamaster.cls.psi.impl.SimplePsiImplUtil"
+}
+
+simpleFile ::= item_*
+
+private item_ ::= (property|COMMENT|CRLF)
+
+property ::= (KEY? SEPARATOR VALUE?) | KEY {
+  mixin="org.javamaster.cls.psi.impl.SimpleNamedElementImpl"
+  implements="org.javamaster.cls.psi.SimpleNamedElement"
+  methods=[getKey getValue getName setName getNameIdentifier getPresentation]
+}
