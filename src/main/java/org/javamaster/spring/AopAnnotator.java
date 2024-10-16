@@ -1,7 +1,5 @@
 package org.javamaster.spring;
 
-import org.javamaster.pcel.psi.AopExpr;
-import org.javamaster.utils.AopUtils;
 import com.intellij.codeInspection.ProblemHighlightType;
 import com.intellij.lang.annotation.AnnotationHolder;
 import com.intellij.lang.annotation.Annotator;
@@ -15,6 +13,8 @@ import com.intellij.psi.PsiClass;
 import com.intellij.psi.PsiElement;
 import com.intellij.psi.PsiPackage;
 import com.intellij.psi.search.GlobalSearchScope;
+import org.javamaster.pcel.psi.AopExpr;
+import org.javamaster.utils.AopUtils;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
@@ -23,6 +23,9 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
+/**
+ * @author yudong
+ */
 public class AopAnnotator implements Annotator {
     private static final Pattern DOT_PATTERN = Pattern.compile("\\.");
 

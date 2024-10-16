@@ -25,6 +25,9 @@ import javax.swing.*;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * @author yudong
+ */
 @SuppressWarnings("DialogTitleCapitalization")
 public class InjectLineMarkerProvider implements LineMarkerProvider {
 

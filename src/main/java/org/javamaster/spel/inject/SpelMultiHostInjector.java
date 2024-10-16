@@ -23,8 +23,9 @@ import java.util.Set;
 public class SpelMultiHostInjector implements MultiHostInjector {
     public static final Set<String> INTEREST_ANNO_SET = Sets.newHashSet(
             "cn.com.bluemoon.common.annos.AopLock",
-            "cn.com.bluemoon.common.annos.AopLogRecord",
-            "cn.com.bluemoon.washservice.common.annos.AopLock"
+            "cn.com.bluemoon.mh.common.aop.annos.AopLock",
+            "cn.com.bluemoon.washservice.common.annos.AopLock",
+            "cn.com.bluemoon.common.annos.AopLogRecord"
     );
     public static final Set<String> INTEREST_ATTR_NAME = Sets.newHashSet("lockKeySpEL", "type", "desc");
 

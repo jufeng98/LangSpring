@@ -1,20 +1,5 @@
 package org.javamaster.spring;
 
-import org.javamaster.spel.psi.SpelArrayWrap;
-import org.javamaster.spel.psi.SpelCollectionProjection;
-import org.javamaster.spel.psi.SpelFieldName;
-import org.javamaster.spel.psi.SpelFieldOrMethod;
-import org.javamaster.spel.psi.SpelFieldOrMethodName;
-import org.javamaster.spel.psi.SpelFieldRecursiveCall;
-import org.javamaster.spel.psi.SpelMethodCall;
-import org.javamaster.spel.psi.SpelMethodParam;
-import org.javamaster.spel.psi.SpelMethodParams;
-import org.javamaster.spel.psi.SpelRoot;
-import org.javamaster.spel.psi.SpelRootCombination;
-import org.javamaster.spel.psi.SpelSpel;
-import org.javamaster.spel.psi.SpelStaticT;
-import org.javamaster.spel.psi.SpelStringLiteral;
-import org.javamaster.utils.SpelUtils;
 import com.google.common.collect.Lists;
 import com.intellij.lang.injection.InjectedLanguageManager;
 import com.intellij.lang.jvm.types.JvmType;
@@ -45,6 +30,21 @@ import com.intellij.psi.impl.source.PsiClassReferenceType;
 import com.intellij.psi.search.GlobalSearchScope;
 import com.intellij.psi.util.PsiTreeUtil;
 import com.intellij.util.ProcessingContext;
+import org.javamaster.spel.psi.SpelArrayWrap;
+import org.javamaster.spel.psi.SpelCollectionProjection;
+import org.javamaster.spel.psi.SpelFieldName;
+import org.javamaster.spel.psi.SpelFieldOrMethod;
+import org.javamaster.spel.psi.SpelFieldOrMethodName;
+import org.javamaster.spel.psi.SpelFieldRecursiveCall;
+import org.javamaster.spel.psi.SpelMethodCall;
+import org.javamaster.spel.psi.SpelMethodParam;
+import org.javamaster.spel.psi.SpelMethodParams;
+import org.javamaster.spel.psi.SpelRoot;
+import org.javamaster.spel.psi.SpelRootCombination;
+import org.javamaster.spel.psi.SpelSpel;
+import org.javamaster.spel.psi.SpelStaticT;
+import org.javamaster.spel.psi.SpelStringLiteral;
+import org.javamaster.utils.SpelUtils;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -54,7 +54,9 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.stream.Collectors;
 
-
+/**
+ * @author yudong
+ */
 public class SpelReferenceContributor extends PsiReferenceContributor {
 
     @Override

@@ -4,6 +4,9 @@ import com.intellij.extapi.psi.ASTWrapperPsiElement;
 import com.intellij.lang.ASTNode;
 import org.jetbrains.annotations.NotNull;
 
+/**
+ * @author yudong
+ */
 public class SpelPsiElement extends ASTWrapperPsiElement {
     public SpelPsiElement(@NotNull ASTNode node) {
         super(node);

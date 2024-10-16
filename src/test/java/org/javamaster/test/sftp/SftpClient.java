@@ -1,4 +1,4 @@
-package com.github.xiaolyuh.test.utils;
+package org.javamaster.test.sftp;
 
 import com.jcraft.jsch.ChannelExec;
 import com.jcraft.jsch.ChannelSftp;

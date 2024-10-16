@@ -24,6 +24,9 @@ import java.nio.charset.StandardCharsets;
 import java.time.Duration;
 import java.util.function.Consumer;
 
+/**
+ * @author yudong
+ */
 public class TranslateDialog {
     private JPanel mainPanel;
     private JPanel contentPanel;

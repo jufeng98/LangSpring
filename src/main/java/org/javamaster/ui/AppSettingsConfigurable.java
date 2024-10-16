@@ -7,6 +7,9 @@ import org.jetbrains.annotations.Nullable;
 
 import javax.swing.*;
 
+/**
+ * @author yudong
+ */
 public class AppSettingsConfigurable implements Configurable {
     private ConfigDialog configDialog;
 

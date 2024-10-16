@@ -1,6 +1,5 @@
 package org.javamaster.spring;
 
-import org.javamaster.utils.ValueUtils;
 import com.intellij.openapi.util.TextRange;
 import com.intellij.openapi.vfs.VirtualFile;
 import com.intellij.patterns.PlatformPatterns;
@@ -19,11 +18,15 @@ import com.intellij.psi.xml.XmlAttributeValue;
 import com.intellij.psi.xml.XmlTag;
 import com.intellij.util.ProcessingContext;
 import org.apache.commons.lang3.tuple.Triple;
+import org.javamaster.utils.ValueUtils;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Collection;
 import java.util.List;
 
+/**
+ * @author yudong
+ */
 public class XmlReferenceContributor extends PsiReferenceContributor {
 
     @Override

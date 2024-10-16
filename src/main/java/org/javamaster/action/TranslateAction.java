@@ -16,6 +16,9 @@ import org.javamaster.ui.TranslateDialog;
 import org.javamaster.utils.ConfigUtil;
 import org.jetbrains.annotations.NotNull;
 
+/**
+ * @author yudong
+ */
 public class TranslateAction extends AnAction {
 
     @Override

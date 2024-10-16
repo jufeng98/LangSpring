@@ -32,7 +32,6 @@ intellij {
             "com.intellij.properties",
         )
     )
-    intellij.updateSinceUntilBuild.set(false)
 }
 
 tasks {
@@ -57,6 +56,11 @@ tasks {
             "-Xms1024m",
             "-Xmx2048m",
         )
+    }
+
+    patchPluginXml {
+        sinceBuild.set("221")
+        untilBuild.set("243.*")
     }
 
 

@@ -1,6 +1,5 @@
 package org.javamaster.inspection;
 
-import org.javamaster.i18n.UiBundle;
 import com.intellij.codeInspection.AbstractBaseJavaLocalInspectionTool;
 import com.intellij.codeInspection.LocalQuickFix;
 import com.intellij.codeInspection.ProblemDescriptor;
@@ -12,8 +11,12 @@ import com.intellij.psi.PsiElementVisitor;
 import com.intellij.psi.PsiField;
 import com.intellij.refactoring.RefactoringFactory;
 import com.intellij.refactoring.RenameRefactoring;
+import org.javamaster.i18n.UiBundle;
 import org.jetbrains.annotations.NotNull;
 
+/**
+ * @author yudong
+ */
 public class FieldNameInspection extends AbstractBaseJavaLocalInspectionTool {
     private final RemoveUnderlineStartFix fix = new RemoveUnderlineStartFix();
     private static final String UNDERLINE = "_";

@@ -1,6 +1,5 @@
 package org.javamaster.spring;
 
-import org.javamaster.utils.ValueUtils;
 import com.intellij.lang.ASTNode;
 import com.intellij.lang.folding.FoldingBuilderEx;
 import com.intellij.lang.folding.FoldingDescriptor;
@@ -12,13 +11,16 @@ import com.intellij.psi.JavaRecursiveElementWalkingVisitor;
 import com.intellij.psi.PsiElement;
 import com.intellij.psi.PsiLiteralExpression;
 import org.apache.commons.lang3.tuple.Triple;
+import org.javamaster.utils.ValueUtils;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
-
+/**
+ * @author yudong
+ */
 final class ValueAnnotationFoldingBuilder extends FoldingBuilderEx {
 
     @Override

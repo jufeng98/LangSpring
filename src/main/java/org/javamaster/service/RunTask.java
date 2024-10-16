@@ -2,6 +2,9 @@ package org.javamaster.service;
 
 import com.intellij.openapi.diagnostic.Logger;
 
+/**
+ * @author yudong
+ */
 @FunctionalInterface
 public interface RunTask extends Runnable {
     Logger LOG = Logger.getInstance(RunTask.class);

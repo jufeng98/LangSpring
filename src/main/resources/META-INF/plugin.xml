@@ -7,9 +7,18 @@
 
     <description>
         <![CDATA[
-        Integrate Spring SpEL language and pointcut expression language<br>
-        
-        集成 Spring 的 SpEL 表达式语言和切面表达式语言
+        Integrate Spring SpEL language and pointcut expression language.<br>
+        SpEL language: Implemented parsing of common syntax.<br>
+        Spring pointcut expression: At present, only parsing the @annotation indicator has been implemented.<br>
+
+        集成 Spring 的 SpEL 表达式语言和切面表达式语言<br>
+        <b>主要功能</b>
+        <ol>
+            <li>支持切面表达式 @annotation 指示符，从切点跳转到对应的切面</li>
+            <li>支持切面表达式 @annotation 指示符，从切面跳转到相应的切点</li>
+            <li>支持切面表达式 @annotation 指示符内跳转到包或类</li>
+            <li>支持切面表达式输入时的智能提示</li>
+        <ol>
     ]]>
     </description>
 
@@ -32,6 +41,12 @@
         <notificationGroup id="LangSpring.NONE"
                            isLogByDefault="true"
                            displayType="NONE"/>
+
+        <toolWindow factoryClass="org.javamaster.ui.LangSpringToolWindow"
+                    icon="/icons/test.svg"
+                    anchor="right"
+                    doNotActivateOnStart="true"
+                    id="LangSpring.toolWindow"/>
 
         <localInspection language="JAVA"
                          groupPath="Java"
@@ -189,6 +204,11 @@
     </applicationListeners>
 
     <actions>
+        <action id="LangSpring.HelpAction" class="org.javamaster.action.HelpAction"
+                text="帮助" description="帮助" icon="/icons/help.svg">
+            <add-to-group group-id="HelpMenu" anchor="last"/>
+        </action>
+
         <action
                 id="LangSpring.EditorIllustrationAction"
                 class="org.javamaster.action.TranslateAction"

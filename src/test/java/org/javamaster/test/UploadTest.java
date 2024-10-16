@@ -1,6 +1,6 @@
-package com.github.xiaolyuh.test;
+package org.javamaster.test;
 
-import com.github.xiaolyuh.test.utils.SftpClient;
+import org.javamaster.test.sftp.SftpClient;
 import com.google.gson.JsonObject;
 import org.apache.commons.io.FileUtils;
 import org.junit.Ignore;
@@ -17,14 +17,14 @@ public class UploadTest {
 
     @Test
     public void uploadPlugin() throws Exception {
-        File file = new File("build/distributions/git-flow-plus-4idea-1.3.8.zip");
+        File file = new File("build/distributions/LangSpring-1.0.0.zip");
         String configJsonStr = FileUtils.readFileToString(new File("C:\\Users\\Admin\\Documents\\java-config.json"),
                 StandardCharsets.UTF_8.name());
         System.out.println("config:" + configJsonStr);
         JsonObject configJson = gson.fromJson(configJsonStr, JsonObject.class).getAsJsonObject("ssoInfo");
         SftpClient sftpClient = new SftpClient(configJson.get("name").getAsString(), configJson.get("pwd").getAsString(),
                 configJson.get("ip").getAsString(), configJson.get("port").getAsInt());
-        String name = "git-flow-plus-4idea.zip";
+        String name = "LangSpring.zip";
         try {
             sftpClient.connect();
             System.out.println("开始上传");

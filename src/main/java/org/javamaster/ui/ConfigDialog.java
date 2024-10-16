@@ -6,6 +6,9 @@ import org.javamaster.utils.ConfigUtil;
 
 import javax.swing.*;
 
+/**
+ * @author yudong
+ */
 public class ConfigDialog {
     private JPanel mainPanel;
     private JTextField appIdField;

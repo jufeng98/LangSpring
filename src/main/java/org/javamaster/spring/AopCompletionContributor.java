@@ -1,7 +1,5 @@
 package org.javamaster.spring;
 
-import org.javamaster.pcel.psi.PointcutExpressionTypes;
-import org.javamaster.utils.AopUtils;
 import com.intellij.codeInsight.completion.CompletionContributor;
 import com.intellij.codeInsight.completion.CompletionParameters;
 import com.intellij.codeInsight.completion.CompletionResultSet;
@@ -16,8 +14,13 @@ import com.intellij.psi.PsiElement;
 import com.intellij.psi.PsiPackage;
 import com.intellij.psi.impl.JavaPsiFacadeImpl;
 import com.intellij.psi.search.GlobalSearchScope;
+import org.javamaster.pcel.psi.PointcutExpressionTypes;
+import org.javamaster.utils.AopUtils;
 import org.jetbrains.annotations.NotNull;
 
+/**
+ * @author yudong
+ */
 public class AopCompletionContributor extends CompletionContributor {
     private static final String[] DESIGNATORS = {"@annotation", "@target", "execution", "target", "bean"};
 

@@ -1,6 +1,5 @@
 package org.javamaster.spring;
 
-import org.javamaster.utils.ValueUtils;
 import com.intellij.openapi.util.TextRange;
 import com.intellij.patterns.StandardPatterns;
 import com.intellij.psi.PsiElement;
@@ -15,12 +14,15 @@ import com.intellij.psi.PsiReferenceRegistrar;
 import com.intellij.psi.ResolveResult;
 import com.intellij.util.ProcessingContext;
 import org.apache.commons.lang3.tuple.Triple;
+import org.javamaster.utils.ValueUtils;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-
+/**
+ * @author yudong
+ */
 public class ValueAnnotationReferenceContributor extends PsiReferenceContributor {
 
     @Override

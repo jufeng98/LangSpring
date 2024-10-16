@@ -1,4 +1,4 @@
-package com.github.xiaolyuh.test
+package org.javamaster.test
 
 import kotlinx.coroutines.*
 import kotlinx.coroutines.channels.Channel

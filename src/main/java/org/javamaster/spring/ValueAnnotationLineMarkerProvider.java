@@ -33,7 +33,9 @@ import java.awt.event.MouseEvent;
 import java.util.Collection;
 import java.util.List;
 
-
+/**
+ * @author yudong
+ */
 public final class ValueAnnotationLineMarkerProvider extends RelatedItemLineMarkerProvider {
 
     @Override
@@ -125,7 +127,7 @@ public final class ValueAnnotationLineMarkerProvider extends RelatedItemLineMark
         @SuppressWarnings("DialogTitleCapitalization")
         private void showErrorTip(MouseEvent e) {
             JBPopupFactory.getInstance()
-                    .createMessage("请先在git-flow-k8s.json中配置apolloUrl")
+                    .createMessage("请先在 git-flow-k8s.json 文件中配置 apolloUrl")
                     .show(new RelativePoint(e));
         }
     }
